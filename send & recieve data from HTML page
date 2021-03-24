@@ -1,0 +1,18 @@
+All data send from HTML Form :
+  - Recieved at page.php as array ( $_post | $_get   - $_REQUET)
+  - to access data in that array , you access it by key
+  See the attached example:
+    - page.html
+      <form class="login" action="page0.php" method = "POST">
+        <input type="text" name="username" />
+        <input type="password" name="password" />
+        <button type="submit">login</button>
+       </form>
+      
+      -page0.php
+      <?php
+        $user = $_POST['username'];
+        $pass = $_POST['password']
+        echo $user . $pass . "</br>";
+        
+        // You can here use $_REQUEST instead of $_POST
