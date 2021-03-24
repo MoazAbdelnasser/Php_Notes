@@ -1,0 +1,31 @@
+#page.php
+<?php 
+    $user = $_POST['username'];
+    $pass = $_POST['password'];
+    echo "<p>username :" .$user . " & Password : " .$pass . "</p>";
+    echo gettype($user) . "<br>";
+    echo is_array($_POST) . "<br>";
+    echo is_numeric($pass) . "<br>"; // int or float
+    echo is_int($pass) . "<br>";
+    echo is_bool($user) . "<br>";
+    echo isset($pass) . "<br>"; // Variable is defined and has value  (returns 1 or 0)
+    echo isset($hi) . "<br>";
+    echo unset($pass); // remove defined variable
+    echo empty($pass); // return 1,0 (check if has a value of null)
+    
+#try.php
+
+<html>
+    <head>
+        <title>Try PHP Variables</title>
+    </head>
+    <body>
+        <form class="login" action="page.php" method="POST">
+            <input type="text" name="username"/>
+            <br>
+            <input type="password" name="password"/>
+            <br>
+            <input type="submit" name="submit"/>
+        </form>
+    </body>
+</html>
